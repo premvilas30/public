@@ -1,0 +1,15 @@
+import random
+def name_random(name=None):
+    """
+    This function will take a string and append it with a random number between 6 and 15 both inclusive with a space in between
+    for e.g.
+        name = Rahul
+        output : Rahul 11
+    """
+    try:
+        if name in ["" , None]:
+            raise Exception
+        random_number = random.randint(6,15)
+        return name+" "+str(random_number)
+    except Exception:
+        print "Input parameter name can not be empty string or None "
